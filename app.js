@@ -1,3 +1,5 @@
+// IMAGE CARAOSELL START
+
 var images = [];
 var index = 0;
 
@@ -25,12 +27,12 @@ function rightShift(){
     images[1]=images[0];
     images[0]=tempImage;
 
-    callAnimation(tempImg1,"slideRight","0.8s");
-    callAnimation(tempImg2,"slideRight","0.8s");
-    callAnimation(tempImg3,"slideLeft","0.8s");
-    setTimeout(function(){resetAnimation(tempImg1)},800);
-    setTimeout(function(){resetAnimation(tempImg2)},800);
-    setTimeout(function(){resetAnimation(tempImg3)},800);
+    callAnimation(tempImg1,"slideRight","0.3s");
+    callAnimation(tempImg2,"slideRight","0.3s");
+    callAnimation(tempImg3,"slideLeft","0.3s");
+    setTimeout(function(){resetAnimation(tempImg1)},300);
+    setTimeout(function(){resetAnimation(tempImg2)},300);
+    setTimeout(function(){resetAnimation(tempImg3)},300);
 }
 
 function leftShift(){
@@ -51,12 +53,12 @@ function leftShift(){
     images[1]=images[2];
     images[2]=tempImage;
 
-    callAnimation(tempImg1,"slideRight","0.8s");
-    callAnimation(tempImg2,"slideLeft","0.8s");
-    callAnimation(tempImg3,"slideLeft","0.8s");
-    setTimeout(function(){resetAnimation(tempImg1)},800);
-    setTimeout(function(){resetAnimation(tempImg2)},800);
-    setTimeout(function(){resetAnimation(tempImg3)},800);
+    callAnimation(tempImg1,"slideRight","0.3s");
+    callAnimation(tempImg2,"slideLeft","0.3s");
+    callAnimation(tempImg3,"slideLeft","0.3s");
+    setTimeout(function(){resetAnimation(tempImg1)},300);
+    setTimeout(function(){resetAnimation(tempImg2)},300);
+    setTimeout(function(){resetAnimation(tempImg3)},300);
 }
 
 function callAnimation(imgToAnimate,animationToPerform,timeOfAnimation)
@@ -74,3 +76,46 @@ rightBtn.addEventListener('click',rightShift)
 
 const leftBtn = document.getElementById('btnL')
 leftBtn.addEventListener('click',leftShift)
+
+// IMAGE CARAOSELL END 
+
+//-----------------------------------------------------------------------------
+
+// QUOTES CARAOSELL START 
+
+var quotesArray = ["One cannot think well, love well, sleep well, if one has not dined well.","People who love to eat are always the best people.","Food is not just eating energy. It's an experience.","Cooking is all about people. Food is maybe the only universal thing that really has the power to bring everyone together. No matter what culture, everywhere around the world, people eat together.","Food is the ingredient that binds us together." ];
+
+var repeatIndex=-1;
+function quoteSelector(){
+    var textTReplace = document.getElementById('textToReplace')
+    var randomIndex = Math.floor(Math.random() * quotesArray.length);
+    if(repeatIndex==randomIndex)
+    {
+        var randomIndex = Math.floor(Math.random() * quotesArray.length);
+    }
+    repeatIndex=randomIndex;
+    textTReplace.innerHTML = quotesArray[randomIndex];
+    console.log(Math.floor(Math.random()*5));
+}   
+    document.addEventListener('DOMContentLoaded', function() {
+    quoteSelector();})
+
+    
+    const nxtbtn = document.getElementById('nextQuoteButton');
+    nxtbtn.addEventListener('click', function(){
+    var textTReplace = document.getElementById('textToReplace')
+    var randomIndex = Math.floor(Math.random() * quotesArray.length);
+    if(repeatIndex==randomIndex)
+    {
+        var randomIndex = Math.floor(Math.random() * quotesArray.length);
+    }
+    repeatIndex=randomIndex;
+    textTReplace.innerHTML = quotesArray[randomIndex];
+    console.log(Math.floor(Math.random()*5));
+    });
+
+   
+
+
+
+// QUOTES CAROSELL END
