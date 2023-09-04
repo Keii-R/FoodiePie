@@ -111,11 +111,9 @@ function quoteSelector(){
     }
     repeatIndex=randomIndex;
     textTReplace.innerHTML = quotesArray[randomIndex];
-    console.log(Math.floor(Math.random()*5));
+    callAnimation(quotesDQuotes,"textAnimate","0.6s");
+    setTimeout(function(){resetAnimation(quotesDQuotes)},600);
+    //console.log(Math.floor(Math.random()*5));
     });
-
-   
-
-
 
 // QUOTES CAROSELL END

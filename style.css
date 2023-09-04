@@ -3,7 +3,6 @@
 *{
     padding: 0px;
     margin: 0px;
-    scroll-behavior: smooth;
 }
 
 /* START LANDING PAGE */
@@ -255,8 +254,101 @@
 }
 /* GRID END */
 
-/* START ANIMATIONS */
+/*FOOD ITEMS START*/
+.foodItems{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+}
+.glassItem{
+    height: 90vh;
+    width: 93vw;
+    background: linear-gradient(135deg, rgba(255,255,255,0.1),rgba(255,255,255,0));
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 10px 10px 20px black;
+}
+/*FOOD ITEMS  END*/
 
+/* FOOTER START */
+
+/* FOOTER END */
+.footer{
+    display: flex;
+    align-items: flex-end;
+    height: 100vh;
+    width: 100vw;
+}
+
+.footerGlass{
+    display: flex;
+    flex-direction: column;
+    height: 70vh;
+    width: 100vw;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7));
+    backdrop-filter: blur(10px);
+    box-shadow: 10px 10px 20px black;
+    border: 1px solid rgba(0, 0, 0, 0.336);
+    justify-content: center;
+    align-items: center;
+    padding: 2vh;
+}
+
+.footerGlass h3{
+    align-self: flex-start;
+    color: rgba(255, 255, 255, 0.797);
+    text-shadow: 2px 2px 15px grey;
+    padding: 3vh;
+    padding-left: 7vw;
+    font-size: 6vh;
+}
+
+.container4{
+    display: flex;
+    height: 65vh;
+    width: 95vw;
+    align-items: center;
+    justify-content: center;
+}
+
+.container4 .p1{
+    height: 27vh;
+    width: 45vw;
+    color: rgba(255, 255, 255, 0.797);
+    font-size: 3.5vh;
+}
+.container4 .p2{
+    height: 20vh;
+    width: 45vw;
+    color: rgba(255, 255, 255, 0.797);
+    font-size: 3.5vh;
+}
+
+.gifContactUs{
+    align-self: flex-start;
+    height: 50vh;
+    width: 40vw;
+}
+
+.gifContactUs img{
+    height: 48vh;
+    width: 38vw;
+    padding-left: 6vh;
+}
+#mailUs{
+    height: 8vh;
+    width: 8vw;
+    padding-top: 4vh;
+}
+
+#mailUs:hover {
+    transform: translateY(-7%);
+    transform: scale(1.2);
+}
+
+/* START ANIMATIONS */
 @keyframes slideLeft{
     0% {
         transform: translateX(0%);
@@ -297,5 +389,27 @@
     }
 }
 
+@keyframes textAnimate{
+    0% {
+        opacity: 0.2;
+        transform: translateX(-2.5%) translateY(5.5%);
+    }
+    25% {
+        opacity: 0.4;
+        transform: translateX(-1.5%) translateY(-4.5%);
+    }
+    50% {
+        opacity: 0.6;
+        transform: translateX(-1%) translateY(2%);
+    }    
+    75% {
+        opacity: 0.8;
+        transform: translateX(-0.3%) translateY(-1%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0%) translateY(0%);
+    }
+}
 
 /* END ANIMATIONS*/
