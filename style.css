@@ -158,7 +158,7 @@
     z-index: -1;
 }
 .glassGrid h2{
-    color: rgb(156, 38, 38);
+    color: rgba(255, 255, 255, 0.797);
     text-shadow: 5px 5px 5px black;
     font-size: 6vh;
     padding: 3vh;
@@ -263,18 +263,89 @@
     justify-content: center;
 }
 .glassItem{
+    display: flex;
     height: 90vh;
     width: 93vw;
     background: linear-gradient(135deg, rgba(255,255,255,0.1),rgba(255,255,255,0));
     backdrop-filter: blur(10px);
     border-radius: 20px;
     box-shadow: 10px 10px 20px black;
+    align-items: center;
+    justify-content: center;
+}
+.container5{
+    margin: 1vw;
+    height: 74vh;
+    width: 77vw;
+    display: flex;
+    justify-content: space-around;
+}
+.imgNContent{
+    align-self: flex-start;
+    display: flex;
+    height: 74vh;
+    width: 48vw;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.imgFood img{
+    height: 44vh;
+    width: 50vw;
+    box-shadow: 5px 5px 15px black;
+    border: 2px solid black;
+}
+.contentFood{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.569),rgba(0, 0, 0, 0.57));
+    backdrop-filter: blur(10px);
+    height: 28vh;
+    border: 2px double black;
+    box-shadow: 5px 5px 15px black;
+    width: 50vw;
+}
+.contentFood p{
+    font-size: 3vh;
+    color: rgba(255, 255, 255, 0.797);
+    padding: 1rem;
+}
+.imgList{
+    display: flex;
+    flex-direction: column;
+    height: 74vh;
+    width: 19vw;
+    align-items: center;
+    justify-content: space-between;
+}
+.imgList img{
+    height: 18vh;
+    width: 16vw;
+    box-shadow: 2px 2px 15px black;
+    border-radius: 2px;
+    border: 1px solid grey;
+}
+#listImg1:hover{
+    animation: mailAnimate 0.2s ease-in-out;
+    transform: translateY(-5%);
+    transform: scale(1.1);
+}
+#listImg2:hover{
+    animation: mailAnimate 0.2s ease-in-out;
+    transform: translateY(-5%);
+    transform: scale(1.1);
+}
+#listImg3:hover{
+    animation: mailAnimate 0.2s ease-in-out;
+    transform: translateY(-5%);
+    transform: scale(1.1);
+}
+#listImg4:hover{
+    animation: mailAnimate 0.2s ease-in-out;
+    transform: translateY(-5%);
+    transform: scale(1.1);
 }
 /*FOOD ITEMS  END*/
 
 /* FOOTER START */
-
-/* FOOTER END */
 .footer{
     display: flex;
     align-items: flex-end;
@@ -344,9 +415,11 @@
 }
 
 #mailUs:hover {
-    transform: translateY(-7%);
-    transform: scale(1.2);
+    animation: mailAnimate 0.3s;
+    transform: translateY(-5%);
+    transform: scale(1.1);
 }
+/* FOOTER END */
 
 /* START ANIMATIONS */
 @keyframes slideLeft{
@@ -409,6 +482,17 @@
     100% {
         opacity: 1;
         transform: translateX(0%) translateY(0%);
+    }
+}
+
+@keyframes mailAnimate{
+    0%{
+        transform: translateY(0%);
+        transform: scale(1);
+    }
+    100%{
+        transform: translateY(-5%);
+        transform: scale(1.1);
     }
 }
 
