@@ -5,6 +5,10 @@
     margin: 0px;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 /* START LANDING PAGE */
 .background{
     position: fixed;
@@ -81,6 +85,15 @@
 #btnR{
     height: 3vh;
     width: 2vw;
+}
+
+#upArrow{
+    bottom: 1vh;
+    left: 1vh;
+    position: fixed;
+    height: 3vh;
+    width: 3vh;
+    z-index: 2;
 }
 /* END LANDING PAGE */
 
@@ -305,6 +318,7 @@
 }
 .contentFood p{
     font-size: 3vh;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: rgba(255, 255, 255, 0.797);
     padding: 1rem;
 }
@@ -496,4 +510,37 @@
     }
 }
 
+@keyframes mainImgIntro{
+    0%{
+        transform: translateY(-100%);
+        opacity: 0.0;
+    }
+    80%{
+        opacity: 0.3;
+    }
+    90%{
+        opacity: 0.5;
+    }
+    100%{
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes mainContentIntro{
+    0%{
+        transform: translateX(-100%);
+        opacity: 0.0;
+    }
+    80%{
+        opacity: 0.3;
+    }
+    90%{
+        opacity: 0.5;
+    }
+    100%{
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
 /* END ANIMATIONS*/

@@ -1,3 +1,19 @@
+// GENERAL FUNCTIONS START 
+
+function callAnimation(imgToAnimate,animationToPerform,timeOfAnimation)
+{
+    imgToAnimate.style.animation =  animationToPerform + " " + timeOfAnimation + " ease-in-out";
+}
+
+function resetAnimation(imgToAnimate)
+{
+    imgToAnimate.style.animation = "";
+}
+
+// GENERAL FUNCTIONS END 
+
+//-----------------------------------------------------------------------------
+
 // IMAGE CARAOSELL START
 
 var images = [];
@@ -61,16 +77,6 @@ function leftShift(){
     setTimeout(function(){resetAnimation(tempImg3)},300);
 }
 
-function callAnimation(imgToAnimate,animationToPerform,timeOfAnimation)
-{
-    imgToAnimate.style.animation =  animationToPerform + " " + timeOfAnimation + " ease-in-out";
-}
-
-function resetAnimation(imgToAnimate)
-{
-    imgToAnimate.style.animation = "";
-}
-
 const rightBtn = document.getElementById('btnR')
 rightBtn.addEventListener('click',rightShift)
 
@@ -122,7 +128,63 @@ function quoteSelector(){
 
 // FOOD CONTENT START 
 
+var foodItemInfo = ["Ramen is a Japanese noodle dish featuring wheat noodles served in a flavorful broth with various toppings like meat and vegetables. It's a beloved comfort food known for its diverse regional styles.",
+                    "Tacos are a Mexican street food classic, consisting of tortillas filled with various ingredients like seasoned meat, cheese, salsa, and veggies. They offer a burst of flavors and textures in every bite, making them a popular and versatile dish worldwide.",
+                    "Spaghetti is a popular Italian pasta made from durum wheat semolina, typically served with a variety of sauces, including marinara, Alfredo, or carbonara. It's known for its long, thin cylindrical shape and versatility in Italian cuisine. Cooking times vary for different levels of firmness.",
+                    "Chole Bhature is a North Indian dish consisting of spicy chickpea curry (chole) and deep-fried bread (bhature). It's a flavorful and satisfying combination, often served with pickles and yogurt, and is a popular street food and restaurant item in India."];
+var foodItemImages = [];
+foodItemImages[0] = './images/Food/item4.png';
+foodItemImages[1] = './images/Food/item5.jpg';
+foodItemImages[2] = './images/Food/item2.jpg';
+foodItemImages[3] = './images/Food/item1.jpg';
 
+
+var mainImg = document.getElementById('imagePlaceHolder');
+
+var foodContectToReplace = document.getElementById('contentFood')
+var contentFoodBox = document.getElementById('contentFoodBox');
+
+var foodItemImg1 = document.getElementById('listImg1');
+var foodItemImg2 = document.getElementById('listImg2');
+var foodItemImg3 = document.getElementById('listImg3');
+var foodItemImg4 = document.getElementById('listImg4');
+
+placeImage(0);
+placeInfo(0);
+
+foodItemImg1.addEventListener('click',function(){
+    placeImage(0);
+    placeInfo(0);
+})
+
+foodItemImg2.addEventListener('click',function(){
+    placeImage(1);
+    placeInfo(1);
+})
+
+foodItemImg3.addEventListener('click',function(){
+    placeImage(2);
+    placeInfo(2);
+})
+
+foodItemImg4.addEventListener('click',function(){
+    placeImage(3);
+    placeInfo(3);
+})
+
+function placeImage(imgNumber)
+{
+    mainImg.src = foodItemImages[imgNumber];
+    callAnimation(mainImg,"mainImgIntro","0.4s");
+    setTimeout(function(){resetAnimation(mainImg)},400);
+}
+
+function placeInfo(infoNumber)
+{
+    foodContectToReplace.innerHTML = foodItemInfo[infoNumber];
+    callAnimation(contentFoodBox,"mainContentIntro","0.4s");
+    setTimeout(function(){resetAnimation(contentFoodBox)},400);
+}
 
 // FOOD CONTENT END
 
